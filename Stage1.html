@@ -1,92 +1,93 @@
-
 <!DOCTYPE HTML> 
 <html>
 
-
-<head>
-<title>The basics of the Web and HTML</title>
-
-</head>
+ <head>
+  <title>The basics of the Web and HTML</title>
+ </head>
 
 
 <body>
-<h2>The basics of the Web and HTML</h2>
-<p><b>The basics of the Web and HTML<br>
-Creating a Structured Document with HTML<br>
-Adding style to structure to CSS</b></p>
+<h1>The Basics of the Web and HTML</h1>
 
 
-<p>World Wide Web is a collection of HTML documents, that are made of HTML - Hypertext Markup Language. The links between these pages are called Hyper links.
-Browser displays HTML document as a web page. <br>
-URLs - how you refer to documents on the web.<br>
-HTTP - protocol that unites the web, that the web runs on.</p>
+<div>
+<h2>How the Internet works</h2>
+<p>The Web is a collection of web pages. The links between these pages are called <b><em>Hyper links</em></b>. A web page is a text document written in a language called HTML.
+The browser displays an HTML document as a web page. <br>
+<b><em>URLs</em></b> - how you refer to documents on the web.</p>
 
-<p>All different types of file can be found on the web: plain text, HTML. images, videos, music.
-The browser running in your computer makes a request (using the protocol HTTP - the main protocol of the web) to the servers via Internet. Servers return files that the browser displays.
-A web page is a text document written in a language called HTML. Web browsers read these documents, and then interpret and display them.</p>
-<h3><b>HTML(Hyper Text Markup language)</b>
-is the main type of document on the web.</h3>
-<p>The documents are connected by Hyper links.
-There are different types of files on the web: plain text, HTML, Images, videos, music.</p>
-<p>HTML is made up of :
-<em>text content</em> - what you see on the web page - the content;
-<em>markup</em> - how the content is arranged;
-<em>references to other documents</em>
-<em>links to other pages</em></p>
-<p>The markup is made of <b>tags</b>.<br>
-< name>contents< /name><br>
-opening tag    closing tag<br>
-This structure is called element. An HTML element refers to everything within a set of opening and closing tags.</p>
+<p>There are all different types of files on the web: plain text, HTML, images, videos and music.
+The browser running on your computer makes a request (using the protocol HTTP - the main protocol of the web) to the servers via Internet.The servers return files that the browser reads, interprets and displays.</p>
+<h3>HTML(Hyper Text Markup language) </h3>
+ 
+
+<p><a href="http://en.wikipedia.org/wiki/HTML">HTML</a> is made up of :<br>
+-text content - what you see on the web page - the content;<br>
+-markup - how the content is arranged;<br>
+-references to other documents<br>
+-links to other pages.</p>
+
+<p>The markup is made of <b><em>tags</em></b>. An HTML element refers to everything within a set of opening and closing tags.</p>
 
 <h3>The tags of HTML:</h3>
-<p>< b > for bold<br>
-< b >content< /b ><br> 
-< em > for emphasis - italics<br>
-< em >content< /em > </p>
-<p>Everything after < em > is italisized if there is no closing < /em > tag.</p>
+<p><b><em>&lt;b&gt; </em></b> for bold<br>
+<b><em>&lt;em&gt; </em></b> for emphasis - italics<br>
+Everything after &lt;em&gt; will be italisized if there is no closing &lt;/em&gt; tag.</p>
+
 <h3>How to connect an HTML document to any other document on the internet by adding links.</h3>
 <p><b>HTML attributes</b> - a property of an HTML element:<br>
-< tag attr="value">contents </tag> <br>
-< a href="www.reddit.com"> derf < /a ><br>
-Anchor tag - < a > for making links <br>
-<b>href</b> - attribure name<br>
-<b>derf</b> would be a link to reddit.com </p>
-<p>< img > image tag for including images<br>
-< img scr="url"alt="text">
-scr - attribure called source which equels to URL - the URL of the image to download.
-alt - attribute  - alternate, and this is text that gets displayed when the image doesn't load. HTML parses will complain a you if it's not there.
+&lt;tag attr="value">contents &lt;/tag&gt; <br>
+&lt;a href="www.reddit.com"> derf &lt;/a&gt;<br>
+<b><em>Anchor tag </em></b>- &lt;a&gt; for making links <br>
+<b><em>href</em></b> - attribure name<br>
+<b><em>derf</em></b> would be a link to reddit.com </p>
+<p><b><em>&lt;img&gt; image tag</em></b> for including images<br>
+&lt;img scr="url"alt="text">
+scr - attribute called source which equels to URL - the URL of the image to download.
+alt - attribute  - alternate, and this is the text that gets displayed when the image doesn't load.
 Image tag doesn't have a closing tag. It's a VOID tag, it doesn't have a content.</p>
 <b>Whitespace</b> - single space -written in one line<p>
-< br > break (void) for multiple lines. < br > - inline, ending a line<br>
-text< br >text<br></p>
+<b><em>&lt;br&gt; break</em></b> (void) for multiple lines. &lt;br&gt; - inline, ending a line<br>
+text&lt;br&gt;text</p>
 
-<p>< p > paragraph, it's not a VOID tag, it has a content
-< p >content< /p ><br>
+<p><b><em>&lt;p&gt; paragraph</em></b>, it's not a VOID tag, it has a content
+&lt;p&gt;content&lt;/p&gt;<br>
 
 
-< p > block, makes an invisible box. It has height and width.<br>
-< p >text< /p >text</p>
+&lt;p&gt;  - block, makes an invisible box. It has height and width.<br>
+&lt;p&gt;text&lt;/p&gt; </p>
 
 <p><b>Container elements</b><br>
-< span >text< /span > - <b>inline</b>.<br>
-< div >text< /div > - <b>block</b><br>
-The ways to display them with the use of attribute called class, CSS attribute
-CSS - separate l. for adding style to a document.</p>
-<p>< strong > - <b>inline</b><br>
-< form > - <b>block</b></p>
-<b><em>NB:Block tags: div, p, form</b></em>
+&lt;span&gt;text&lt;/span&gt; - <b>inline</b>.<br>
+&lt;div&gt;text&lt;/div&gt; - <b>block</b><br>
+The ways to display them with the use of attribute called class.</p>
+<p>&lt;strong&gt; - <b>inline</b><br>
+&lt;form&gt; - <b>block</b>
+<b><em>NB:Block tags: div, p, form</em></b></p>
 
 <h3>The Structure of HTML document</h3>
-<p>< !DOCTYPE HTML > - doctype<br>
-< html > opening tag (surrounds the entire document)<br>
-< head > meta-data (CSS, java script) <br>     
-< title >Title!< title > - title of the page<br>
-< /head ><br>
-< body > contents of the doc<br>
+<p>&lt;!DOCTYPE HTML&gt; - doctype<br>
+&lt;html&gt; opening tag (surrounds the entire document)<br>
+&lt;head&gt; meta-data (CSS, java script) <br>     
+&lt;title&gt;Title!&lt;title&gt; - title of the page<br>
+&lt;/head&gt;<br>
+&lt;body&gt; contents of the doc<br>
 content<br>
-< /body ><br>
-< /html>
+&lt;/body&gt;<br>
+&lt;/html>
 </p>
+</div>
+<div>
+<p>HTML controls structure and has a spesific syntax and rules.<br>
+CSS controls style.<br>
+Java script - interective components.</p>
+
+<p>HTML elements are rectangular. Everything on a web page is actually a box.
+Some elements are invisible (like the head element)
+You can read the same text as on the page.</p>
+
+<p>The blowser uses HTML tags as elements to form a tree-like structure according to the standard convention for representing and interacting with elements in HTML  - DOM (Document Object Model).</p>
+</div>
 
 
 </body>
