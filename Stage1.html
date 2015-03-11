@@ -2,93 +2,179 @@
 <html>
 
  <head>
-  <title>The basics of the Web and HTML</title>
+    <link rel="stylesheet" type="text/css" href="Stage1.css">
+    <title>The basics of the Web and HTML</title>
  </head>
 
 
 <body>
-<h1>The Basics of the Web and HTML</h1>
+  <h1>The Basics of the Web and HTML</h1>
 
+  <div class="Notes">
 
-<div>
-<h2>How the Internet works</h2>
-<p>The Web is a collection of web pages. The links between these pages are called <b><em>Hyper links</em></b>. A web page is a text document written in a language called HTML.
-The browser displays an HTML document as a web page. <br>
-<b><em>URLs</em></b> - how you refer to documents on the web.</p>
+    <h2>I.How the Internet works</h2>
 
-<p>There are all different types of files on the web: plain text, HTML, images, videos and music.
-The browser running on your computer makes a request (using the protocol HTTP - the main protocol of the web) to the servers via Internet.The servers return files that the browser reads, interprets and displays.</p>
-<h3>HTML(Hyper Text Markup language) </h3>
+    <div class="notion">
+      <div class="notion-title">
+        The Web, Hyperlinks, HTML, HTTP
+      </div>
+
+      <div class="notion-description">
+
+        <p>The Web is a collection of web pages. The links between these pages are called <span class="bold italic">Hyper links</span>. 
+        A web page is a text document written in a language called HTML.
+        The browser displays an HTML document as a web page. </p>
+        <p><span class="bold italic">URLs</span> - how you refer to documents on the web.</p>
+
+        <p>There are all different types of files on the web: plain text, HTML, images, videos and music.
+        The browser running on a computer makes a request (using the protocol HTTP - the main protocol of the web)
+        to the servers via Internet.
+        The servers return files that the browser reads, interprets and displays.</p>
+      </div>
+    </div>
+
+    <div class="notion">
+      <div class="notion-title">HTML(Hyper Text Markup language)</div>
+      <div class="notion-description">
  
+<p><span class="bold"><a href="http://en.wikipedia.org/wiki/HTML">HTML</a> is made up of :</span></p>
+<ul>
+<li>text content - what you see on the web page - the content;</li>
+<li>markup - how the content is arranged;</li>
+<li>references to other documents</li>
+<li>links to other pages.</li>
+</ul>
 
-<p><a href="http://en.wikipedia.org/wiki/HTML">HTML</a> is made up of :<br>
--text content - what you see on the web page - the content;<br>
--markup - how the content is arranged;<br>
--references to other documents<br>
--links to other pages.</p>
+<p><span class="bold italic">The markup</span> is made of <span class="bold italic">tags</span>. HTML tags are used to show the browser the types of HTML elements. An HTML element refers to everything within a set of opening and closing tags.</p>
 
-<p>The markup is made of <b><em>tags</em></b>. An HTML element refers to everything within a set of opening and closing tags.</p>
+<p><span class="bold">The tags of HTML:</span></p>
 
-<h3>The tags of HTML:</h3>
-<p><b><em>&lt;b&gt; </em></b> for bold<br>
-<b><em>&lt;em&gt; </em></b> for emphasis - italics<br>
-Everything after &lt;em&gt; will be italisized if there is no closing &lt;/em&gt; tag.</p>
+<p><span class="bold italic">&lt;b&gt; </span> for bold</p>
+<p><span class="bold italic">&lt;em&gt; </span> for emphasis - italics</p>
+<p>Everything after &lt;em&gt; will be italisized if there is no closing &lt;/em&gt; tag.</p>
 
-<h3>How to connect an HTML document to any other document on the internet by adding links.</h3>
-<p><b>HTML attributes</b> - a property of an HTML element:<br>
-&lt;tag attr="value">contents &lt;/tag&gt; <br>
-&lt;a href="www.reddit.com"> derf &lt;/a&gt;<br>
-<b><em>Anchor tag </em></b>- &lt;a&gt; for making links <br>
-<b><em>href</em></b> - attribure name<br>
-<b><em>derf</em></b> would be a link to reddit.com </p>
-<p><b><em>&lt;img&gt; image tag</em></b> for including images<br>
-&lt;img scr="url"alt="text">
-scr - attribute called source which equels to URL - the URL of the image to download.
+
+<p><span class="bold">How to connect an HTML document to any other document on the internet by adding links.</span></p>
+
+<p><span class="bold italic">HTML attributes</span> - a property of an HTML element:</p>
+<p>&lt;tag attr="value">contents &lt;/tag&gt; </p>
+<p>&lt;a href="www.reddit.com"> derf &lt;/a&gt;</p>
+<p><span class="bold italic">Anchor tag </span>- &lt;a&gt; for making links </p>
+<p><span class="bold italic">href</span> - attribure name</p>
+<p><span class="bold italic">derf</span> would be a link to reddit.com </p>
+<p><span class="bold italic">&lt;img&gt; image tag</span> for including images</p>
+<p>&lt;img scr="url"alt="text"></p>
+<p>scr - attribute called source which equals to URL - the URL of the image to download.
 alt - attribute  - alternate, and this is the text that gets displayed when the image doesn't load.
 Image tag doesn't have a closing tag. It's a VOID tag, it doesn't have a content.</p>
-<b>Whitespace</b> - single space -written in one line<p>
-<b><em>&lt;br&gt; break</em></b> (void) for multiple lines. &lt;br&gt; - inline, ending a line<br>
-text&lt;br&gt;text</p>
+<p><span class="bold italic">Whitespace</span> - single space -written in one line</p>
+<p><span class="bold italic">&lt;br&gt; break</span> (void) for multiple lines. &lt;br&gt; - inline, ending a line</p>
+<p>text&lt;br&gt;text</p>
 
-<p><b><em>&lt;p&gt; paragraph</em></b>, it's not a VOID tag, it has a content
-&lt;p&gt;content&lt;/p&gt;<br>
+<p><span class="bold italic">&lt;p&gt; paragraph</span>, it's not a VOID tag, it has a content
+&lt;p&gt;content&lt;/p&gt;</p>
+
+<p>HTML elements can be either inline or block.</p>
+<p>&lt;p&gt;  is a block element, it makes an invisible box. It has height and width.</p>
+<p>&lt;p&gt;text&lt;/p&gt; </p>
+<p>&lt;strong&gt; - <b>inline</b></p>
+<p>&lt;form&gt; - <b>block</b></p>
 
 
-&lt;p&gt;  - block, makes an invisible box. It has height and width.<br>
-&lt;p&gt;text&lt;/p&gt; </p>
+<p><span class="bold italic">Container elements</span></p>
 
-<p><b>Container elements</b><br>
-&lt;span&gt;text&lt;/span&gt; - <b>inline</b>.<br>
-&lt;div&gt;text&lt;/div&gt; - <b>block</b><br>
-The ways to display them with the use of attribute called class.</p>
-<p>&lt;strong&gt; - <b>inline</b><br>
-&lt;form&gt; - <b>block</b>
-<b><em>NB:Block tags: div, p, form</em></b></p>
+<p>&lt;span&gt;text&lt;/span&gt; - <span class="bold italic">inline</span>.</p>
+<p>&lt;div&gt;text&lt;/div&gt; - <span class="bold italic">block</span></p>
 
-<h3>The Structure of HTML document</h3>
-<p>&lt;!DOCTYPE HTML&gt; - doctype<br>
-&lt;html&gt; opening tag (surrounds the entire document)<br>
-&lt;head&gt; meta-data (CSS, java script) <br>     
-&lt;title&gt;Title!&lt;title&gt; - title of the page<br>
-&lt;/head&gt;<br>
-&lt;body&gt; contents of the doc<br>
-content<br>
-&lt;/body&gt;<br>
-&lt;/html>
-</p>
+<p>Computers understand only clear instructions.</p>
+
 </div>
-<div>
-<p>HTML controls structure and has a spesific syntax and rules.<br>
-CSS controls style.<br>
+</div>
+</div>
+
+<div class="Notes">
+<h2>II. How to create a Structured Document with HTML</h2>
+
+<div class="notion">
+<div class="notion-title">
+The Structure of HTML document</div>
+<div class="notion-description">
+
+<p>HTML controls structure and has a specific syntax and rules.
+CSS controls style.
 Java script - interective components.</p>
 
 <p>HTML elements are rectangular. Everything on a web page is actually a box.
 Some elements are invisible (like the head element)
 You can read the same text as on the page.</p>
 
-<p>The blowser uses HTML tags as elements to form a tree-like structure according to the standard convention for representing and interacting with elements in HTML  - DOM (Document Object Model).</p>
+<p><span class="bold">The structure of an HTML document is as follows:</span></p>
+<p>&lt;!DOCTYPE HTML&gt; - doctype</p>
+<p>&lt;html&gt; opening tag (surrounds the entire document)</p>
+<p>&lt;head&gt; meta-data (CSS, java script) </p>     
+<p>&lt;title&gt;Title!&lt;title&gt; - title of the page</p>
+<p>&lt;/head&gt;</p>
+<p>&lt;body&gt; contents of the doc</p>
+<p>content</p>
+<p>&lt;/body&gt;</p>
+<p>&lt;/html>
+</p>
+
+<p><span class="bold">The "tree-like structure" of HTML.</span></p>
+
+<p>The blowser uses HTML tags as elements to form a tree-like structure according to the standard convention 
+for representing and interacting with elements in HTML  - DOM (Document Object Model).</p>
+</div>
 </div>
 
+<div class="Notes">
+<h2>III. CSS Styling</h2>
+<div class="notion">
+<div class="notion-title">
+Inheritance. Why is it important to avoid repetition?</div>
+<div class="notion-description">
+
+<p>CSS stands for "Cascading Style Sheets." "Cascading" means that rules are applied not only to the elements they directly match, but also to all of those elements' child elements. Inheritance is a key feature in CSS. Inheritance is the mechanism by which properties are applied not only to a specified element, but also to its descendants. Properties that can be inherited are color, font, letter-spacing, line-height, list-style, text-align text-indent, text-transform, visibility, white-space and word-spacing. Properties that cannot be inherited are background, border, display, float and clear, height and width, margin, min- and max-height and -width, outline, overflow, padding, position, text-decoration, vertical-align and z-index. Inheritance prevents certain properties from being declared over and over again in a style sheet.</p>
+</div>
+</div>
+
+<div class="notion">
+<div class="notion-title">
+3 ways to include CSS styling:</div>
+<div class="notion-description">
+<ul>
+<li>Writing CSS in the head of HTML. It suits for small projects;</li>
+<li>Linking your HTML to a separate CSS file;</li>
+<li>Writing your style inline with your HTML.</li>  
+</ul>
+</div>
+</div>
+
+<div class="notion">
+<div class="notion-title">
+Selectors</div>
+<div class="notion-description">
+
+<p>The first thing you write in CSS is a selector. Selectors allow to target HTML elements and apply style to them. ID selectors are the most powerful type of selector. Class selectors are the most useful and well supported in all browsers. Tag selectors are necessary to change properties that are unique to that particular HTML element, f.ex. list-style. You can also combine selectors.</p>
+</div>
+</div>
+
+<div class="notion">
+<div class="notion-title">
+Box sizing</div>
+<p>HTML elements are boxes that have 4 components
+There are 2 techniques to deal with sizing issues: </p>
+<ul>
+<li>Set sizes in terms of percents than pixels;</li>
+<li>Set the box-sizing attribute to border-box for every element.</li>
+</ul>
+<p>Divs are block elements - they take the whole width of a page by default. Adding the rule display:flex; allows divs to appear next to each other.</p>
+
+<p>NB:Different browsers display the same code differently.</p>
+
+</div>
+</div>
+</div>
 
 </body>
 </html>
