@@ -129,14 +129,14 @@ for representing and interacting with elements in HTML  - DOM (Document Object M
 
 <div class="Notes">
 <h2>III. CSS Styling</h2>
-<div class="notion">
-<div class="notion-title">
+  <div class="notion">
+   <div class="notion-title">
 Inheritance. Why is it important to avoid repetition?</div>
-<div class="notion-description">
+    <div class="notion-description">
 
 <p>CSS stands for "Cascading Style Sheets." "Cascading" means that rules are applied not only to the elements they directly match, but also to all of those elements' child elements. Inheritance is a key feature in CSS. Inheritance is the mechanism by which properties are applied not only to a specified element, but also to its descendants. Properties that can be inherited are color, font, letter-spacing, line-height, list-style, text-align text-indent, text-transform, visibility, white-space and word-spacing. Properties that cannot be inherited are background, border, display, float and clear, height and width, margin, min- and max-height and -width, outline, overflow, padding, position, text-decoration, vertical-align and z-index. Inheritance prevents certain properties from being declared over and over again in a style sheet.</p>
-</div>
-</div>
+ </div>
+ </div>
 
 <div class="notion">
 <div class="notion-title">
@@ -171,9 +171,182 @@ There are 2 techniques to deal with sizing issues: </p>
 <p>Divs are block elements - they take the whole width of a page by default. Adding the rule display:flex; allows divs to appear next to each other.</p>
 
 <p>NB:Different browsers display the same code differently.</p>
+</div>
+</div>
 
+<h2>IV.Computer Science</h2>
+
+    <div class="notion">
+      <div class="notion-title">
+        Computer Program, Python, Expressions
+      </div>
+
+      <div class="notion-description">
+<P>A computer is a universal machine that we can program to do almost anything. A programmer writes a computer program  - a precise sequence of steps, that can be a web browser, the Python interpreter, calender application or the Python code. The computer executes the steps of a program super fast. There are a lot of languages to program computers. They are special languages invented for computer programming, they are different from natural languages as they don't allow ambiguity and verbosity to mislead a computer.</P>
+<p>Python is one of the programming languages. Python Interpreter is a program that runs, interprets and executes the code, written in Python language. There are certain grammar rules in Python that we use to write a program, they allow us to form sentences from the parts of speech. The way we're writing grammars is a notation called Backus-Naur Form invented by John Backus. </p>
+<p> An expression is a combination of values, variables, and operators. A value all by itself is considered an expression. Grammar starts with a non-terminal expression. Each rule has the following form: on the left side there's a non-terminal (something that we're not finished with). Then there's an arrow, and then on the right side there's a replacement (a terminal). We can form a sentence by starting from some non-terminal, and then by following the rules we keep replacing non-terminals with their replacements until we're left with only terminals.</p>
 </div>
 </div>
+
+<div class="notion">
+      <div class="notion-title">
+        Variables, Strings
+      </div>
+
+      <div class="notion-description">
+
+       <p>
+        A variable in Python is like a box where you can store a value. A variable is a name for a value. Variables allow to give names to values. The name can be any sequence of letters, numbers as well as underscores as long as it starts with a letter or an underscore. F.ex. speed_of _light.
+       </p>
+
+       <p>To introduce a value we use an assignment statement. The equal sign (=) is used to assign values to variables. Python’s usage of the equal sign is not the mathematical usage of the equal sign. An assignment statement associates a variable name on the left of the equal sign with the value of an expression calculated from the right of the equal sign. Once a variable is assigned a value, the variable can be used in place of that value. F.ex. sum is a variable with a value 5.
+        sum = 5 The variable sum takes the value of 5. We alsways need to introduce a variable before we use it.  
+        print sum + sum  The result is 10. 
+       
+      </p>
+
+       <p>
+       <p>There are different ways to use variables:</p>
+         <ul>
+            <li>Variables make the code easier to understand;</li>
+            <li>Variables allow to store the value of some data;</li>
+            <li>Variables allow to change the value of some data. When we use the variable again, it refers to the new value.</li>
+         </ul>
+       </p>
+       
+       <p>String is a sequence of characters surrounded by quotes, single or double. We can put strings together by using the plus operator. The new string is the result of pasting 2 strings together: string + string - concatenation. We can't add numbers and strings together. We can multiply strings though. It's also possible to extract subsequences from the string. [] brackets are used to extract part of the string.
+       </p>
+       <p> The difference between 2+2 and "2"+"2" is as follows:
+       2 is a number, and 2 in quotes "2" is a string. So, this difference will lead to different results: 2+2 is 4. The code "2"+"2" would give "22".
+         
+       </p>
+       </div>
+</div>
+
+       <div class="notion">
+        <div class="notion-title">
+        Functions
+        </div>
+
+      <div class="notion-description">
+      <p>A function is a program that performs a specific task. It takes an input, works with it, changes it accoring to a certain pathern and returns an output. F.ex. a function named sum can take numbers and calculate and return a sum of these numbers as output.   </p>
+      </div>
+      </div>
+
+      <div class="notion">
+        <div class="notion-title">
+        There is a difference between making and using functions.
+        </div>
+        <div class="notion-description">
+        <p>A function has a following structure:</p> 
+        <ul>
+          <li>A line of code with a keyword def;</li>
+          <li>A function name</li>
+          <li>Parameters in parenthesis</li>
+          <li>The code that specifies what we are going to do with the parameters</li>
+        </ul>
+
+        <p>The parameters will be replaced by actual values when the function is called. To call a function we use its name followed by the values in the parenthesis.</p>
+        <p>Example:</p>
+        <ul>
+          <li>def sum(a,b)</li>
+          <li>  return a+b</li>
+          <li>print sum (1,4)</li>
+        </ul>
+        <p>Functions help to avoid repetitions. After you have created a function, you can use it at any time, in any place. This saves you the time and effort of having to retell the computer what to do every time it does a common task.</p>
+        <p>If a function doesn't have a return statement, we won't see an output. We'll get the result none. The return keyword tells Python what the function should produce as output.</p>
+
+      </div>
+      </div>
+     <div class="notion">
+      <div class="notion-title"> 
+      If statements
+      </div>
+      <div class="notion-description">
+      <p>The If statement is used for conditional execution: it allows to control what code executes based on the result of a test expression. The code in < block > only executes if test expression has a true value. Else clause is used in an if statement to provide code that will run when the < TestExpression > has a False value.</p>
+
+     </div>
+      </div>
+
+     <div class="notion">
+      <div class="notion-title">
+       Operators
+       </div>
+       <div class="notion-description">
+       <p>There are different types of operators in Python:</p>
+       <ul>
+       <li>Arithmetic Operators, f.ex. +, - , *, /;</li>
+       <li>Comparison Operators, such as <, >, <=, >=, ==, !=</li>
+       <li>Assignment operator: =</li>
+       <li>Logical Operators. The and and or operators behave similarly to logical conjunction (and) and disjunction (or). The important property they have which is different from other operators is that the second operand expression is evaluated only when necessary. A boolean expression (or logical expression) evaluates to one of two states true or false. Python provides the boolean type that can be either set to False or True.</li>
+       <li>etc.</li>
+          
+       </ul>
+       
+       </div>
+       </div>
+
+      <div class="notion">
+        <div class="notion-title">
+        Loops
+      </div>
+        <div class="notion-description">
+        <p>A loop is a way to do things over and over again. We use loops when we need to execute a block of code several number of times. </p>
+        <p>The While loop repeats a statement or group of statements while a given condition is true. It tests the condition before executing the loop body. If the < TestExpression > evaluates to False, the while loop is done and execution continues with the following statement. If the < TestExpression > evaluates to True, the < Block > is executed. Then, the loop repeats, returning to the < TestExpression > and continuing to evaluate the < Block > as long as the < TestExpression > is True.</p>
+        <ul>
+        <li>while < TestExpression >:</li>
+        <li>< Block ></li>
+        </ul>
+        <p>The Infinite Loop</p>
+        <p>A loop becomes infinite loop if a condition never becomes false. This results in a loop that never ends. Such a loop is called an infinite loop.</p>
+        <p>The break statement can be used to terminate the current loop and to allow to resume execution at the next statement.</p>
+
+        <p>The For loop allows to execute a block once for each element of a collection: </p>
+        <ul>
+        <li>for < Name > in < Collection >:</li>
+        <li>< Block ></li>
+        </ul>
+        <p>The loop goes through each element of the collection, assigning that element to the < Name > and evaluating the < Block >.</p>
+       </div>
+       </div>
+      <div class="notion">
+        <div class="notion-title">
+        Lists
+        </div>
+        <div class="notion-description">
+        <p>List is a structured data because you can break it down into its characters. The list data type is more powerful than a string. In a list elements can be anything.</p>
+        <p>Creating a list: a list is a sequence of zero or more elements, surrounded by square brackets[< element >, < element >, ...].</p>
+        <p>Operations that we can do we lists:</p>
+        <ul>
+          <li>We can select elements. It is possible to output the value of the element in < List > at position < Number >. Elements are indexed starting from 0. <b>< List >[< Number >] = < Element ></b></li>
+
+          <li>We can select sub-sequences. It outputs a sub-sequence of < List > starting from position < Start >, up to (but not including) position < Stop >.</li>
+
+          <li>We can change the value of an element in < List > at position < Number >.</li>
+
+          <li>It outputs the number of elements in < List >.<b>Length: len(< List  >) = < Number ></b></li>
+
+          <li>We can change < List > by adding < Element > to the end of the list:<b> Append: < List >.append(<  Element >)</b></li>
+
+          <li>We create a new list that is the elements of < List1 > followed by the elements of < List2 >. It's called <b>concatenation</b>.</li>
+
+          <li>We can find the position of the first occurrence of an element matching < Value > in < List >.</li>
+
+        </ul> 
+        <p>Loops on lists. </p>
+        <ul>
+        <li>A while loop keeps executing the block as long as test evaluates to true.</li>
+          <li>A for loop provides a way to execute a block once for each element of a list:</li>
+          <li>for < Name > in < List >:</li>
+          <li>< Block ></li>
+        </ul>
+        <p>Aliasing is a specific feature of lists, when we have 2 different ways to refer to the same object.</p>
+        <p>Nested lists - a list made of lists. List elements can be accessed by their index. The first element has index 0, the last one has index -1. Each nested list is counted as one element. Its inner elements are not taken into account.</p>
+
+
+       </div>
+       </div>
+
 </div>
 
 </body>
