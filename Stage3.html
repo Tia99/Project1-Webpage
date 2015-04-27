@@ -310,6 +310,60 @@ The loop goes through each element of the collection, assigning that element to 
       time.sleep(the number of seconds)</p>
       <p>To find files in a folder in Python: os.listdir() - that will give you everything in the given directory. OS - is a module in Python Standard Library, short for Operating System. That has a function inside it called listdir that lists everything that is in the given directory. The function listdir takes in a path of the folder that contains the necessary information: os.listdir(r"path"). We use r (rawpack) to tell Python to take the string as it is and not to interpret it differently. </p>
       <p>There is another function inside OS module its def rename. It's used for renaming files.</p>
+      </div>
+      </div>
+
+      <div class="notion">
+      <div class="notion-title">
+      Adding a movie trailer.
+      </div>
+      <div class="notion-description">
+
+      <p>I file</p>
+      <ul>
+         <li>import webbrowser</li>
+         <li>class Movie():</li>
+             <li>def __init__(self, movie_title, trailer_youtube):</li>
+                 <li>self.title = movie_title</li>
+                 <li>self.trailer = trailer_youtube</li>
+             <li>def show_trailer(self):</li>
+                 <li>webbrowser.open(self.trailer)</li>
+
+      </ul>
+
+            
+      <p>II file</p>
+      <ul>
+        <li>import my_movie</li>
+
+        <li>cinderella = my_movie.Movie("Cinderella","https://www.youtube.com/watch?v=WRuHM6rLSF8")</li>
+        <li>print (cinderella.title)</li>
+        <li>cinderella.show_trailer()</li>
+      </ul>   
+
+      
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/WRuHM6rLSF8" allowfullscreen></iframe>
+      </div>
+      </div>
+
+      <div class="notion">
+      <div class="notion-title">
+      How OOP is connected to HTML and CSS.
+      </div>
+      <div class="notion-description">
+      <p>HTML and CSS are not programming languages, but they have something in common with OOP. As objects are in center of OOP, the same in HTML and CSS, we see visual patterns in a design, as objects.  If we think of chunks of HTML that define sections of a web page as "objects" or "modules", then we have CSS classes that we apply to objects, which define the design of the object. </p>
+      <p>So, websites are developed with help of some concepts that are also used in OOP, such as: </p>
+      <ul>
+          <li>A code can be reused. CSS can be reusable and stylesheets may also become much smaller.</li>
+          <li>It's easy to maintain a code and it is more simple for others to read the code.</li>
+          <li>Abstraction is used to manage complexity. It allows to create an object by breaking up the larger complex system into smaller and simpler pieces. F. ex. We can abstract the concept of a shape by taking the essential characteristics of what makes a shape and placing them together somewhere. I think defining the visual patterns in a design would count as abstraction.</li>
+          <li>The ability to add multiple classes to html parallels the idea of inheritance. Inheritance is a way to reuse the code of one object to establish a subtype of that object. It enables new objects to take on the characteristics of the existing object.</li>
+          <li>In OOP an object can be of different types. It  can behave like one thing under certain circumstances and like another thing under a different set of circumstances. Selectors in CSS f. ex. enable CSS to behave differently under different contexts.</li>
+          <li>Also, the object can be improved regardless of other objects. If you want some html to look a certain way you can add a class without needing to know the specific CSS inside.</li>
+
+      </ul>
+        <p>Thus, designing websites more efficiently is possible due to some OOP principles.</p>
+     
            
        </div>
     </div>
