@@ -1,10 +1,17 @@
+import jinja2
 import webapp2
+import os
+
+JINJA_ENVIRONMENT = jinja2.Environment(
+    loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
+    extensions=['jinja2.ext.autoescape'],
+    autoescape=True)
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
-        name = "John"
-        self.response.headers['Content-Type'] = 'text/html'
-        self.response.write('<html><head><title>World</title></head><body><h1>Hello '+ name +'!</h1></body></html>')
+        template_values = {}
+        template = JINJA_ENVIRONMENT.get_template('main.html')
+        self.response.write(template.render(template_values))
 
 app = webapp2.WSGIApplication([
     ('/', MainPage),
