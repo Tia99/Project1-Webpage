@@ -1,0 +1,88 @@
+
+Setting up a server and server-side programming.
+Web application, computer networking, the Internet, "server-side" programming.
+A server is a computer that interacts with a request we make to the computer.
+F.ex. google.com - request to Google servers - to return a website
+
+
+I. Networks
+1. Network is a group of entities (people, computers, organizations) that can communicate, even though they don't have to be all directly connected. There have to be at least 3 entities(A, B, C). A is not directly connected to C. But A can send a message through B. 
+2. What we need to make a network:
+- the way to encode and interpret messages
+- the way to route messages
+- rules for deciding who gets to use resources. If f.ex. there are 2 messages that go through the same place, only one can be sent at a time. We need to figure out when.
+3. Measuring a network.
+There are 2 ways for measuring networks: latency and bandwidth.
+Latency - time it takes a message to get from source to destination. And that's for the start of the message. So, we can measure latency by timimg when you start sending to the time that the receiver starts receiving. This is a unit of time. It is measured in seconds and now in miliseconds. 1000 miliseconds = 1 second.
+Bandwidth - amount of information that can be transmitted per unit of time. It can be measured in bits per second (units of information divided by units of time). In the Internet it is measured in Mbps(megabits per second or million bits per second).
+4. A bit is the smallest unit of information. Each bit is one yes or no decision. On computing we usually think that as either a 0 or 1. So, that long stream of 0s and 1s is the information we are sending. It can be encoding a string of text, an image, a number. We can send anything that we want just using bits. Adding one more bit doubles the number of things we can distinguish.
+We encode messages into bits and then we encode them on the wire(electrons/photons). A message that appears on the Internet has a destination. The routers have to figure out the next destination. We need the ways to decide who gets the resources. What we get on the Internet is the best effort service. if a message goes over the same link as other messages, the router can only send one message at a time. There are different policies that different routers follow.
+5. Protocol
+What we need to make a network work is a protocol. It is a set of rules that people agree to, that tell you how entities can talk to each other. So, for the web, the protocol gives rules about how a client and a server talk to each other. The client is a webbrowser and the server is the webserver. If you want the server to do something, the client has to send a message in a particular way. The protocol that is used on the web is called hypertext transfer protocol (HTTP). All URLs start with HTTP. There are 2 main messages that we send to the server.  GET is one of them - GET + the name of the object you want to get. You send a web request using your browser by clicking on a link. the browser figures out what is requested, then it sends a get message to the right web server. That was the server specified by the URL. The server will receive the message, will run some code on it and will find the requested file and will send back a response, which is the contents of the requested object. It is actually what is happening when you click on a link.
+6. URL - uniform resource locator
+http://www.udacity.com/
+http - protocol
+www.udacity.com - host, host name or domain name of the server that has the requested document. This can also be an IP address. The host translates into an IP address. And it's the description of the mashine we want to get. 
+/ - a minimum path. The path is the requested document, but it can be more complicated. 
+URLs are case sensitive!
+7. Query parameters(get parameters)
+http://example.com/foo?p=1&q=neat
+?p=1 - extra parameter whose name is p, and value is 1.
+The 1st QP is separated from URL using a question mark. All the following parameters are separated from each other by &.
+So, the new parameter is q=neat.
+Query parameters are extra information the server gets. They can affect caching because technically it changes the entire URL.
+8. Caching
+A cache is something that stores data so that you don't have to retrieve it later. It can be used to make data requests faster. 
+9. A fragment is used to reference a particuler part of the page you are looking at. It is separated by #. The fragment purely exists in the browser.
+The fragment follow the query parameters.
+10. Port
+http://localhost:8000/
+localhost - host
+8000 - port
+By default the port equals 80.
+To make Internet connection you need 2 things the address of the mashine, represented by the host and a port.
+HTTP requests begin with a request line. 
+GET/fooHTTP/1.1
+It is made of 3 parts:
+GET - method
+/foo - path
+HTTP/1.1 - version
+The method is a type of requets we are making to the server.
+GET - this is how we get the document from the server.
+POST - another method used for sending data to the server.
+/foo - an actual document we are requesting from the server.
+10. Absolute vs Relative Paths.
+Relative path for the URL gives an address that is "relative to the host". A full website address includes http://www. - this is an absolute path. It always includes the domain name of the website. The relative path only points to a file, a file path.
+The request line is followed by a number of headers:
+Host:www.example.com
+User-Agent: chrome v.17 It describes who is making the request(Browser + some version info). When we make a request all of these is sent at once.
+Web browsers may have multiple names. One web server can host the website for lots of websites.
+User- agent is one of the most important headers in HTTP request. It is important to use good user-gaents when writing software as it is an nice thing, it makes the web work well for everybody.
+11. HTTP responses.
+The server sends back the response, the document you requested or information about that document.
+Status line - HTTP/1.1 zoo ok 
+The version of the status line matches the version of the request line.
+And it is followed by status code and reason phrase.
+200 ok - doc is found
+302 found - the doc is located somewhere else.
+404 not found - the doc wasnt' found
+500 server error - the server broke trying to handle the request
+The status line is followed by headers:
+Date, Server, Content-type, Content-length.
+12. Classification of responses from the server.
+The responses can be static and dynamic.
+Static - is a prewritten file, that the server just returns(image).
+Dynamic - responses that are built on the fly by a program. Every content online is dynamic. They were built by programs called web applications.
+A web application is a program that generates content. It is on the webserver, understands HTTP and generates content that the browser requests.
+
+
+
+
+
+
+
+
+
+
+
+
