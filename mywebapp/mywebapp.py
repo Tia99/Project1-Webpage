@@ -15,6 +15,13 @@ class MainPage(webapp2.RequestHandler):
         template = JINJA_ENVIRONMENT.get_template('main.html')
         self.response.write(template.render(template_values))
 
+class CommentHandler(webapp2.RequestHandler):
+    def post(self):
+        user_name = self.request.get("username")
+        comment = self.request.get("comment")
+        self.redirect("/")
+
 app = webapp2.WSGIApplication([
     ('/', MainPage),
+    ('/comment', CommentHandler)
 ], debug=True)
