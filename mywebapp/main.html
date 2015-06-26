@@ -382,5 +382,15 @@ The loop goes through each element of the collection, assigning that element to 
         </form>
       </div>
     </div>
+    <div class="notion">
+      <div class="notion-title">
+        Last comments:
+      </div>
+      <div class="notion-description">
+        {% for entry in comments %}
+          <p>{{ entry.date.strftime('%x %X') }}:&nbsp;<b>{{ entry.username }}</b> said "{{ entry.comment }}"</p>
+        {% endfor %}
+      </div>
+    </div>
 </body>
 </html>

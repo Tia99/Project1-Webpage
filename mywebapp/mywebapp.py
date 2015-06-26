@@ -1,16 +1,24 @@
 import jinja2
 import webapp2
 import os
+from google.appengine.ext import ndb
 
 JINJA_ENVIRONMENT = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
+class CommentEntry(ndb.Model):
+    """A main model for representing an individual Comment entry."""
+    username = ndb.StringProperty(indexed=False)
+    comment = ndb.StringProperty(indexed=False)
+    date = ndb.DateTimeProperty(auto_now_add=True)
+
 class MainPage(webapp2.RequestHandler):
     def get(self):
+        comments = CommentEntry.query().order(-CommentEntry.date).fetch(20)
         template_values = {
-            'name': 'Bill'
+            'comments': comments
         }
         template = JINJA_ENVIRONMENT.get_template('main.html')
         self.response.write(template.render(template_values))
@@ -19,7 +27,8 @@ class MainPage(webapp2.RequestHandler):
         username_entered = self.request.get('username')
         comment_entered = self.request.get('comment')
         if self.valid_username(username_entered) and self.valid_comment(comment_entered):
-            #TODO: save to db
+            entry = CommentEntry(username = username_entered, comment = comment_entered)
+            entry.put()
             self.redirect('/')
         else:
             template_values = {
