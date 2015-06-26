@@ -371,9 +371,12 @@ The loop goes through each element of the collection, assigning that element to 
         Adding comments
       </div>
       <div class="notion-description">
-        <form method="post" action="/comment">
-          <label>Name</label><input type="text" name="username"><br>
-          <label>Comment</label><input type="text" name="comment"><br>
+        {% if error %}
+          <div style="color:red">{{ error }}</div>
+        {% endif %}
+        <form method="post" action="/">
+          <label>Name&nbsp;</label><input type="text" name="username" value="{{ username }}"><br>
+          <label>Comment&nbsp;</label><input type="text" name="comment" value="{{ comment }}"><br>
           <br>
           <input type="submit" value="Send">
         </form>
