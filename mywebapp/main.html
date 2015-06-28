@@ -362,10 +362,117 @@ The loop goes through each element of the collection, assigning that element to 
 
       </ul>
       <p>Thus, designing websites more efficiently is possible due to some OOP principles.</p>
-     
+      </div>
+    </div>
+
+
+      <div class="notion">
+        <div class="notion-title">
+          Setting up a server and server-side programming.
+          </div>
+      <div class="notion-description">
+      <p>A server is a computer that interacts with a request we make to the computer. F.ex. google.com - request to Google servers - to return a website. </p>
+      <p>I.Networks</p>
+      
+          <p>Network is a group of entities (people, computers, organizations) that can communicate, even though they don't have to be all directly connected. There have to be at least 3 entities(A, B, C). A is not directly connected to C. But A can send a message through B. </p>
+
+          <p>What we need to make a network:</p>
+      <ul>
+          <li>the way to encode and interpret messages</li>
+          <li>the way to route messages</li>
+          <li>rules for deciding who gets to use resources. If f.ex. there are 2 messages that go through the same place, only one can be sent at a time. We need to figure out when.</li>
+                
+      </ul>
+        <p>There are 2 ways for measuring networks: latency and bandwidth.
+        Latency - time it takes a message to get from source to destination. And that's for the start of the message. So, we can measure latency by timimg when you start sending to the time that the receiver starts receiving. This is a unit of time. It is measured in seconds and now in miliseconds. 1000 miliseconds = 1 second. Bandwidth - amount of information that can be transmitted per unit of time. It can be measured in bits per second (units of information divided by units of time). In the Internet it is measured in Mbps(megabits per second or million bits per second).</p>
+        <p>What we need to make a network work is a protocol. It is a set of rules that people agree to, that tell you how entities can talk to each other. So, for the web, the protocol gives rules about how a client and a server talk to each other. The client is a webbrowser and the server is the webserver. If you want the server to do something, the client has to send a message in a particular way. The protocol that is used on the web is called hypertext transfer protocol (HTTP). All URLs start with HTTP. There are 2 main messages that we send to the server.  GET is one of them - GET + the name of the object you want to get. You send a web request using your browser by clicking on a link. the browser figures out what is requested, then it sends a get message to the right web server. That was the server specified by the URL. The server will receive the message, will run some code on it and will find the requested file and will send back a response, which is the contents of the requested object. It is actually what is happening when you click on a link.</p>
+        <p>To make Internet connection you need 2 things the address of the mashine, represented by the host and a port. HTTP requests begin with a request line. The method is a type of requets we are making to the server.
+        <p>GET - this is how we get the document from the server.</p>
+        <p>POST - another method used for sending data to the server.</p>
+        <p>Difference between GET and POST:</p>
+        <h4>GET</h4>
+        <ul>
+          <li>parameter in URL</li>
+          <li>used for fetching documents</li>
+          <li>used to describe what document we are looking for</li>
+          <li>has maximum URL length</li>
+          <li>ok to cache</li>
+          <li>shouldn't change the server</li>
+        </ul>
+
+        <h4>POST</h4>
+        <ul>
+          <li>parameter in the body</li>
+          <li>used to update data (we are making changes to the server)</li>
+          <li>no max length</li>
+          <li>not ok to cache (never cached)</li>
+          <li>ok to changed the sever</li>
+        </ul>
+        <h4>Absolute vs Relative Paths.</h4>
+        <p>Relative path for the URL gives an address that is "relative to the host". A full website address includes http://www. - this is an absolute path. It always includes the domain name of the website. The relative path only points to a file, a file path. The request line is followed by a number of headers: Host:www.example.com User-Agent: chrome v.17 It describes who is making the request(Browser + some version info). When we make a request all of these is sent at once. Web browsers may have multiple names. One web server can host the website for lots of websites. User- agent is one of the most important headers in HTTP request. It is important to use good user-gaents when writing software as it is an nice thing, it makes the web work well for everybody.</p>
+        <h4>HTTP responses</h4>
+        <p>The server sends back the response, the document you requested or information about that document.</p>
+        <p>Status line - HTTP/1.1 zoo ok</p>
+        <p>The version of the status line matches the version of the request line.And it is followed by status code and reason phrase.The status line is followed by headers: Date, Server, Content-type, Content-length.</p>
+        <h4>Classification of responses from the server.</h4>
+        <p>The responses can be static and dynamic. Static - is a prewritten file, that the server just returns(image). Dynamic - responses that are built on the fly by a program. Every content online is dynamic. They were built by programs called web applications.A web application is a program that generates content. It is on the webserver, understands HTTP and generates content that the browser requests.</p>
+           
            
        </div>
     </div>
+    <div class="notion">
+        <div class="notion-title">
+        Validation
+        </div>
+      <div class="notion-description">
+        <p>Validation - is verifying on the Server side that what we received is the data we expected. Sometimes the server gets a junk, completely broken data.</p> 
+        <p>There are some possible solutions to users entering bad data into our form:</p>
+        <ul>
+          <li>1. We can use dropdowns and that will limit what is entered into our form.</li>
+          <li>2. We should verify what is entered and complain if the data is junk.</li>
+        </ul>
+        <p>How validation works:</p>
+        <p>The user makes a request to the server for the form. This is a GET request. The server responds with the form data. Then the user makes a POST request to the server with the data. Then the server runs the validation. If the data is normal, the server will return "Thanks", if not, the server will return the form data again with an error message. </p>
+        <p>The user can also break our form by entering HTML, we need so called escaping for this. HTML allows us to escape certain characters or change them. F.ex. (") we convert into (&amp;). </p>
+        <p>There is a function that is already included in Python.</p>
+        <p>import cgi</p>
+        <p>def escape_html(s):</p>
+          <p>return cgi.escape(s, quote=True)</p>
+
+        <p>Also, it is nice to redirect aftre a form submission, so that reloading the page doesn't resubmit the form. We can have distinct pages for forms and success pages. Redirection will allow us to share success link and and we'll be able to reload the page without an annoying message.</p>
+        <p>To do redirect we need:</p>
+        <ul>
+          <li>to make a "thanks" handler;</li>
+          <li>add the /thanks url;</li>
+          <li>redirect to the /thanks url.</li>
+        </ul>
+
+
+      </div>
+    </div>
+
+    <div class="notion">
+      <div class="notion-title">
+      HTML Templates
+      </div>
+      <div class="notion-description">
+      <p>HTML embedded in code can be really difficult to maintain. Any change to the design of the page requires a change to the Python code. The design of a site tends to change far more frequently than the underlying Python code, so it would be convenient if the design could change without needing to modify the Python code. It’s much cleaner and more maintainable to separate the design of the page from the Python code itself.</p>
+      <p>It's better to use a templating system, where the HTML is kept in a separate file with special syntax to indicate where the data from the application appears. A template is a document or a file having a present format, used as a starting point for a particular application so that the format does not have to be recreated each time it is used.</p>
+      <p>Avoiding repetition by using templating  systems will let you make complex applications easily. Templates refer to a library. A template library is a library to build complicated strings. When we create a web application, most of the time we're referring to HTML. F.ex. jinja2 is a template library built into GoogleAppEngine. </p>
+      <p>The most powerful part of Jinja is template inheritance. Template inheritance is an approach to managing templates that resembles object-oriented programming techniques. You can inherit the contents of one template to another (like extending a class) and change blocks of content therein (like overriding methods of a class.) This keeps template management minimal and efficient, since each template only contains the differences from the template it extends.</p>
+      <p>There are certain useful tips to make a better template:</p>
+      <ul>
+        <li>Always automatically escape variables when possible;</li>
+        <li>Minimize code in templates;</li>
+        <li>Minimize HTML in code;</li>
+        <li>Make more readable code.</li>
+      </ul>
+      
+
+      </div>
+    </div>
+
+
     <div class="notion">
       <div class="notion-title">
         Adding comments

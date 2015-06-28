@@ -1,7 +1,7 @@
 
-Setting up a server and server-side programming.
-Web application, computer networking, the Internet, "server-side" programming.
-A server is a computer that interacts with a request we make to the computer.
+                     Setting up a server and server-side programming.
+             Web application, computer networking, the Internet, "server-side" programming.
+ A server is a computer that interacts with a request we make to the computer.
 F.ex. google.com - request to Google servers - to return a website
 
 
@@ -47,10 +47,28 @@ It is made of 3 parts:
 GET - method
 /foo - path
 HTTP/1.1 - version
-The method is a type of requets we are making to the server.
+   The method is a type of requets we are making to the server.
 GET - this is how we get the document from the server.
 POST - another method used for sending data to the server.
+Difference between GET and POST:
+Get
+parameter in URL
+used for fetching documents
+used to describe what document we are looking for
+has maximum URL length
+ok to cache
+shouldn't change the server.
+
+
+Post 
+parameter in the body
+used to update data (we are making changes to the server)
+no max length
+not ok to cache (never cached)
+ok to changed the sever
+
 /foo - an actual document we are requesting from the server.
+
 10. Absolute vs Relative Paths.
 Relative path for the URL gives an address that is "relative to the host". A full website address includes http://www. - this is an absolute path. It always includes the domain name of the website. The relative path only points to a file, a file path.
 The request line is followed by a number of headers:
@@ -70,10 +88,56 @@ And it is followed by status code and reason phrase.
 The status line is followed by headers:
 Date, Server, Content-type, Content-length.
 12. Classification of responses from the server.
-The responses can be static and dynamic.
+   The responses can be static and dynamic.
 Static - is a prewritten file, that the server just returns(image).
 Dynamic - responses that are built on the fly by a program. Every content online is dynamic. They were built by programs called web applications.
 A web application is a program that generates content. It is on the webserver, understands HTTP and generates content that the browser requests.
+
+
+
+
+Validation - 
+is verifying on the Server side that what we received is the data we expected. Sometimes the server gets a junk, completely broken data. There are some possible solutions to users entering bad data into our form:
+1. We can use dropdowns and that will limit what is entered into our form.
+2. We should verify what is entered and complain if the data is junk.
+How validation works:
+The user makes a request to the server for the form. This is a GET request. The server responds with the form data. Then the user makes a POST request to the server with the data. Then the server runs the validation. If the data is normal, the server will return "Thanks", if not, the server will return the form data again with an error message. 
+The user can also break our form by entering HTML, we need so called escaping for this. HTML allows us to escape certain characters or change them. F.ex. (") we convert into (&amp;). 
+There is a function that is already included in Python.
+import cgi
+def escape_html(s):
+    return cgi.escape(s, quote=True)
+
+Also, it is nice to redirect aftre a form submission, so that reloading the page doesn't resubmit the form. We can have distinct pages for forms and success pages. Redirection will allow us to share success link and and we'll be able to reload the page without an annoying message.
+To do redirect we need:
+to make a "thanks" handler;
+add the /thanks url;
+redirect to the /thanks url.
+
+
+          HTML Templates and Abstraction
+HTML embedded in code can be really difficult to maintain.
+Any change to the design of the page requires a change to the Python code. The design of a site tends to change far more frequently than the underlying Python code, so it would be convenient if the design could change without needing to modify the Python code.it’s much cleaner and more maintainable to separate the design of the page from the Python code itself. We can do this with the help of a template.
+
+
+It's better to use a templating system, where the HTML is kept in a separate file with special syntax to indicate where the data from the application appears. It's better to use a template. A template is a document or a file having a present format, used as a starting point for a particular application so that the format does not have to be recreated each time it is used.
+Avoiding repetition by using templating  systems will let you make complex applications easily. Templates refer to a library. A template library is a library to build complicated strings. When we create a web application, most of the time we're referring to HTML. jinja2 is a template library built into GoogleAppEngine. 
+Variable substitution
+{{ variable}}
+{{ }} tells the template to print the value.
+
+
+Statement Syntax
+
+{ % statement % }
+   output
+{ % end statement % }
+
+For loop syntax
+
+{ % forstatement % }
+{ % endfor % }
+
 
 
 
